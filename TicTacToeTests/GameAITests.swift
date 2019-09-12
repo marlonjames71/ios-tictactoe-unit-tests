@@ -21,10 +21,10 @@ class GameAITests: XCTestCase {
 	// * Game Player
 
 	func testThereIsNoWinnerWithNewGame() {
-		var board = GameBoard()
+//		var board = GameBoard()
 
-		XCTAssertFalse(game(board: board, isWonBy: .x))
-		XCTAssertFalse(game(board: board, isWonBy: .o))
+//		XCTAssertFalse(checkWin(board: board, isWonBy: .x))
+//		XCTAssertFalse(checkWin(board: board, isWonBy: .o))
 	}
 
 	// TDD = Test Driven Development
@@ -48,63 +48,63 @@ class GameAITests: XCTestCase {
 
 	// Vertical Check
 	func testXWinsCheckingVertical1() throws {
-		var board = GameBoard()
+		let board = GameBoard()
 		try board.place(mark: .x, on: (0, 0))
 		try board.place(mark: .o, on: (1, 0))
 		try board.place(mark: .x, on: (0, 1))
 		try board.place(mark: .o, on: (1, 1))
 		try board.place(mark: .x, on: (0, 2))
 
-		XCTAssertTrue(game(board: board, isWonBy: .x))
+		XCTAssertTrue(checkWin(board: board, isWonBy: .x))
 	}
 
 	func testOWinsCheckingVertical1() throws {
-		var board = GameBoard()
+		let board = GameBoard()
 		try board.place(mark: .o, on: (0, 0))
 		try board.place(mark: .x, on: (1, 0))
 		try board.place(mark: .o, on: (0, 1))
 		try board.place(mark: .x, on: (1, 1))
 		try board.place(mark: .o, on: (0, 2))
 
-		XCTAssertTrue(game(board: board, isWonBy: .o))
+		XCTAssertTrue(checkWin(board: board, isWonBy: .o))
 	}
 
 	func testXWinsCheckingVertical2() throws {
-		var board = GameBoard()
+		let board = GameBoard()
 		try board.place(mark: .x, on: (1, 0))
 		try board.place(mark: .o, on: (2, 0))
 		try board.place(mark: .x, on: (1, 1))
 		try board.place(mark: .o, on: (2, 1))
 		try board.place(mark: .x, on: (1, 2))
 
-		XCTAssertTrue(game(board: board, isWonBy: .x))
+		XCTAssertTrue(checkWin(board: board, isWonBy: .x))
 	}
 
 	func testXWinsCheckingVertical3() throws {
-		var board = GameBoard()
+		let board = GameBoard()
 		try board.place(mark: .x, on: (2, 0))
 		try board.place(mark: .o, on: (1, 0))
 		try board.place(mark: .x, on: (2, 1))
 		try board.place(mark: .o, on: (1, 1))
 		try board.place(mark: .x, on: (2, 2))
 
-		XCTAssertTrue(game(board: board, isWonBy: .x))
+		XCTAssertTrue(checkWin(board: board, isWonBy: .x))
 	}
 
 	// Horizontal Check
 	func testXWinsCheckingHorizontal1() throws {
-		var board = GameBoard()
+		let board = GameBoard()
 		try board.place(mark: .x, on: (0, 0))
 		try board.place(mark: .o, on: (0, 1))
 		try board.place(mark: .x, on: (1, 0))
 		try board.place(mark: .o, on: (1, 1))
 		try board.place(mark: .x, on: (2, 0))
 
-		XCTAssertTrue(game(board: board, isWonBy: .x))
+		XCTAssertTrue(checkWin(board: board, isWonBy: .x))
 	}
 
 	func testOWinsCheckingHorizontal1() throws {
-		var board = GameBoard()
+		let board = GameBoard()
 		try board.place(mark: .x, on: (0, 0))
 		try board.place(mark: .o, on: (0, 1))
 		try board.place(mark: .x, on: (1, 0))
@@ -112,40 +112,40 @@ class GameAITests: XCTestCase {
 		try board.place(mark: .x, on: (1, 2))
 		try board.place(mark: .o, on: (2, 1))
 
-		XCTAssertTrue(game(board: board, isWonBy: .o))
+		XCTAssertTrue(checkWin(board: board, isWonBy: .o))
 	}
 
 	// Diaginal Check
 	func testXWinsDiagonalTopLeftToBottomRight() throws {
-		var board = GameBoard()
+		let board = GameBoard()
 		try board.place(mark: .x, on: (0, 0))
 		try board.place(mark: .o, on: (1, 0))
 		try board.place(mark: .x, on: (1, 1))
 		try board.place(mark: .o, on: (0, 2))
 		try board.place(mark: .x, on: (2, 2))
 
-		XCTAssertTrue(game(board: board, isWonBy: .x))
+		XCTAssertTrue(checkWin(board: board, isWonBy: .x))
 	}
 
 	func testXWinsDiagonalBottomLeftToTopRight() throws {
-		var board = GameBoard()
+		let board = GameBoard()
 		try board.place(mark: .x, on: (0, 2))
 		try board.place(mark: .o, on: (0, 0))
 		try board.place(mark: .x, on: (1, 1))
 		try board.place(mark: .o, on: (0, 1))
 		try board.place(mark: .x, on: (2, 0))
 
-		XCTAssertTrue(game(board: board, isWonBy: .x))
+		XCTAssertTrue(checkWin(board: board, isWonBy: .x))
 	}
 
 	
 	func testXNotWinsConditionVertical1And2() throws {
-		var board = GameBoard()
+		let board = GameBoard()
 		try board.place(mark: .x, on: (2, 0))
 		try board.place(mark: .x, on: (2, 1))
 		try board.place(mark: .x, on: (2, 2))
 
-		XCTAssertTrue(game(board: board, isWonBy: .x))
+		XCTAssertTrue(checkWin(board: board, isWonBy: .x))
 	}
 
 

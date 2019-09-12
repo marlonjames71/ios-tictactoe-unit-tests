@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		37BAD37123295A7200DE5C70 /* GameBoardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BAD37023295A7200DE5C70 /* GameBoardTests.swift */; };
 		37BAD373232968C100DE5C70 /* GameAITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BAD372232968C100DE5C70 /* GameAITests.swift */; };
+		37BAD3752329A82200DE5C70 /* GameControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BAD3742329A82200DE5C70 /* GameControl.swift */; };
+		37BAD3772329E01700DE5C70 /* GameControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BAD3762329E01700DE5C70 /* GameControlTests.swift */; };
 		9DA41C3C2148ABB5001A3F45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA41C3B2148ABB5001A3F45 /* AppDelegate.swift */; };
 		9DA41C412148ABB5001A3F45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DA41C3F2148ABB5001A3F45 /* Main.storyboard */; };
 		9DA41C432148ABB5001A3F45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DA41C422148ABB5001A3F45 /* Assets.xcassets */; };
@@ -34,6 +36,8 @@
 		37BAD36A232959E300DE5C70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37BAD37023295A7200DE5C70 /* GameBoardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBoardTests.swift; sourceTree = "<group>"; };
 		37BAD372232968C100DE5C70 /* GameAITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameAITests.swift; sourceTree = "<group>"; };
+		37BAD3742329A82200DE5C70 /* GameControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameControl.swift; sourceTree = "<group>"; };
+		37BAD3762329E01700DE5C70 /* GameControlTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameControlTests.swift; sourceTree = "<group>"; };
 		9DA41C382148ABB4001A3F45 /* TicTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicTacToe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DA41C3B2148ABB5001A3F45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DA41C402148ABB5001A3F45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -70,6 +74,7 @@
 				37BAD36A232959E300DE5C70 /* Info.plist */,
 				37BAD37023295A7200DE5C70 /* GameBoardTests.swift */,
 				37BAD372232968C100DE5C70 /* GameAITests.swift */,
+				37BAD3762329E01700DE5C70 /* GameControlTests.swift */,
 			);
 			path = TicTacToeTests;
 			sourceTree = "<group>";
@@ -100,6 +105,7 @@
 				9DA41C702148DE1B001A3F45 /* BoardViewController.swift */,
 				9DA41C602148AE13001A3F45 /* GameBoard.swift */,
 				9DA41C662148B945001A3F45 /* GameAI.swift */,
+				37BAD3742329A82200DE5C70 /* GameControl.swift */,
 				9DA41C4D2148ABCA001A3F45 /* Resources */,
 			);
 			path = TicTacToe;
@@ -219,6 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37BAD3772329E01700DE5C70 /* GameControlTests.swift in Sources */,
 				37BAD37123295A7200DE5C70 /* GameBoardTests.swift in Sources */,
 				37BAD373232968C100DE5C70 /* GameAITests.swift in Sources */,
 			);
@@ -229,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DA41C612148AE13001A3F45 /* GameBoard.swift in Sources */,
+				37BAD3752329A82200DE5C70 /* GameControl.swift in Sources */,
 				9DA41C5D2148AC00001A3F45 /* GameViewController.swift in Sources */,
 				9DA41C3C2148ABB5001A3F45 /* AppDelegate.swift in Sources */,
 				9DA41C672148B945001A3F45 /* GameAI.swift in Sources */,

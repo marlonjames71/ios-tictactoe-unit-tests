@@ -8,13 +8,13 @@
 
 import Foundation
 
-enum GameBoardError: Error, Equatable {
-    case invalidSquare
-}
+//enum GameBoardError: Error, Equatable {
+//    case invalidSquare
+//}
 
 typealias Coordinate = (x: Int, y: Int)
 
-struct GameBoard {
+class GameBoard {
     
     enum Mark: Equatable {
         case x
@@ -42,7 +42,7 @@ struct GameBoard {
         }
     }
     
-    mutating func place(mark: Mark, on square: Coordinate) throws {
+	func place(mark: Mark, on square: Coordinate) throws {
         if self[square] != nil {
             throw GameBoardError.invalidSquare
         }
