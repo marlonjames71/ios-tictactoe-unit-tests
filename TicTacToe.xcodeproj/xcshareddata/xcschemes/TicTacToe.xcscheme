@@ -29,12 +29,22 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
-            skipped = "NO">
+            skipped = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "37BAD365232959E300DE5C70"
                BuildableName = "TicTacToeTests.xctest"
                BlueprintName = "TicTacToeTests"
+               ReferencedContainer = "container:TicTacToe.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "37BAD37B232AABAC00DE5C70"
+               BuildableName = "TicTacToeUITests.xctest"
+               BlueprintName = "TicTacToeUITests"
                ReferencedContainer = "container:TicTacToe.xcodeproj">
             </BuildableReference>
          </TestableReference>
