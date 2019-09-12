@@ -8,7 +8,7 @@
 
 import Foundation
 
-func checkWin(board: GameBoard, isWonBy player: GameBoard.Mark) -> Bool {
+func checkWin(board: GameBoard, isWonBy player: Mark) -> Bool {
 
 	// How do we know if x won in vertical direction?
 	return verticalWinCondition(board: board, player: player) ||
@@ -17,7 +17,7 @@ func checkWin(board: GameBoard, isWonBy player: GameBoard.Mark) -> Bool {
 }
 
 
-func verticalWinCondition(board: GameBoard, player: GameBoard.Mark) -> Bool {
+func verticalWinCondition(board: GameBoard, player: Mark) -> Bool {
 	for x in 0 ..< 3 {
 		var count = 0
 		for y in 0 ..< 3 {
@@ -34,7 +34,7 @@ func verticalWinCondition(board: GameBoard, player: GameBoard.Mark) -> Bool {
 	return false
 }
 
-func horizontalWinCondition(board: GameBoard, player: GameBoard.Mark) -> Bool {
+func horizontalWinCondition(board: GameBoard, player: Mark) -> Bool {
 	for y in 0 ..< 3 {
 		var count = 0
 		for x in 0 ..< 3 {
@@ -50,7 +50,7 @@ func horizontalWinCondition(board: GameBoard, player: GameBoard.Mark) -> Bool {
 	return false
 }
 
-func diagonalWinCondition(board: GameBoard, player: GameBoard.Mark) -> Bool {
+func diagonalWinCondition(board: GameBoard, player: Mark) -> Bool {
 	let middlePosition = board[(1, 1)]
 
 	if middlePosition == player {

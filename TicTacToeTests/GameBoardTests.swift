@@ -40,7 +40,7 @@ class GameBoardTests: XCTestCase {
 
 	//
 	func testPlacingXMarkInTopLeftCorner() throws {
-		var board = GameBoard()
+		let board = GameBoard()
 
 		try board.place(mark: .x, on: (0, 0))
 
@@ -49,7 +49,7 @@ class GameBoardTests: XCTestCase {
 	}
 
 	func testPlacingDuplicateMarkThrowsError() throws {
-		var board = GameBoard()
+		let board = GameBoard()
 		try board.place(mark: .x, on: (0, 0))
 		XCTAssertThrowsError(try board.place(mark: .o, on: (0, 0)))
 	}

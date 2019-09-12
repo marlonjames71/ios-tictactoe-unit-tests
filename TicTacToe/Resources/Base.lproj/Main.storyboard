@@ -31,8 +31,9 @@
                             <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="JbU-62-13k">
                                 <rect key="frame" x="20" y="35" width="335" height="30"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e0R-RM-Whk">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="1000" text="Player X's Turn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e0R-RM-Whk">
                                         <rect key="frame" x="0.0" y="0.0" width="232" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="GameViewController.statusLabel"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -97,6 +98,7 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fGT-Na-II2">
                                                 <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="BoardViewController.button0"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="60" id="5XS-uE-JnU"/>
                                                     <constraint firstAttribute="height" constant="60" id="BH7-8T-FXh"/>
@@ -111,6 +113,7 @@
                                             </button>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Deb-DP-mPB">
                                                 <rect key="frame" x="98" y="0.0" width="60" height="60"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="BoardViewController.button1"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="60" id="VXn-eG-YWf"/>
                                                     <constraint firstAttribute="height" constant="60" id="z7c-2c-uT8"/>
@@ -125,6 +128,7 @@
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R8g-kp-fOO">
                                                 <rect key="frame" x="196" y="0.0" width="60" height="60"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="BoardViewController.button2"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="60" id="PYj-Md-geW"/>
                                                     <constraint firstAttribute="height" constant="60" id="lQB-Un-vZe"/>
@@ -144,6 +148,7 @@
                                         <subviews>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hTT-LL-Ual">
                                                 <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="BoardViewController.button3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="60" id="0rK-zk-y2M"/>
                                                     <constraint firstAttribute="height" constant="60" id="l5q-iF-k7G"/>
@@ -158,6 +163,7 @@
                                             </button>
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ylJ-qq-3kA">
                                                 <rect key="frame" x="98" y="0.0" width="60" height="60"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="BoardViewController.button4"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="60" id="FZ2-zC-dyv"/>
                                                     <constraint firstAttribute="height" constant="60" id="euF-Zv-bEW"/>
@@ -172,6 +178,7 @@
                                             </button>
                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y2h-Tg-H3c">
                                                 <rect key="frame" x="196" y="0.0" width="60" height="60"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="BoardViewController.button5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="60" id="OLZ-85-rYE"/>
                                                     <constraint firstAttribute="height" constant="60" id="fvk-W1-Hc6"/>
@@ -191,6 +198,7 @@
                                         <subviews>
                                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rO-xK-UIC">
                                                 <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="BoardViewController.button6"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="60" id="maj-GA-OuI"/>
                                                     <constraint firstAttribute="height" constant="60" id="zMM-JR-Vtg"/>
@@ -205,6 +213,7 @@
                                             </button>
                                             <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eh4-Eu-l1c">
                                                 <rect key="frame" x="98" y="0.0" width="60" height="60"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="BoardViewController.button7"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="60" id="FWx-ZI-hik"/>
                                                     <constraint firstAttribute="height" constant="60" id="USN-aC-4Mk"/>
@@ -219,6 +228,7 @@
                                             </button>
                                             <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dyf-AT-eyq">
                                                 <rect key="frame" x="196" y="0.0" width="60" height="60"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="BoardViewController.button8"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="60" id="LGQ-ai-enD"/>
                                                     <constraint firstAttribute="height" constant="60" id="UQP-Gk-S7N"/>
@@ -237,6 +247,7 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <accessibility key="accessibilityConfiguration" identifier="BoardViewController.background"/>
                         <constraints>
                             <constraint firstItem="YtZ-pk-cwJ" firstAttribute="centerX" secondItem="9DQ-LX-wYN" secondAttribute="centerX" id="B05-Br-Bpn"/>
                             <constraint firstItem="YtZ-pk-cwJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="9DQ-LX-wYN" secondAttribute="leadingMargin" id="Gvg-un-FgA"/>

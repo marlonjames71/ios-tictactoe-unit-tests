@@ -49,9 +49,9 @@ class BoardViewController: UIViewController {
                 let coord = (x, y)
                 let button = self.button(for: coord)
                 if let mark = board[coord] {
-                    button.setTitle(mark.stringValue, for: .normal)
+                    button.setTitle(mark.rawValue, for: .normal)
                 } else {
-                    button.setTitle(" ", for: .normal)
+                    button.setTitle(Mark.empty.rawValue, for: .normal)
                 }
             }
         }

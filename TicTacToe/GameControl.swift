@@ -33,10 +33,10 @@ struct GameControl {
 		guard let lastMove = moves.last else { return }
 		try board.remove(on: lastMove)
 		moves.removeLast()
-		if activePlayer == GameBoard.Mark.x {
-			activePlayer = GameBoard.Mark.o
-		} else if activePlayer == GameBoard.Mark.o {
-			activePlayer = GameBoard.Mark.x
+		if activePlayer == Mark.x {
+			activePlayer = Mark.o
+		} else if activePlayer == Mark.o {
+			activePlayer = Mark.x
 		}
 	}
 
@@ -44,7 +44,7 @@ struct GameControl {
 	private(set) var board = GameBoard()
 
 
-	var activePlayer: GameBoard.Mark? = .x
+	var activePlayer: Mark? = .x
 	var gameIsOver: Bool = false
-	var winningPlayer: GameBoard.Mark?
+	var winningPlayer: Mark?
 }

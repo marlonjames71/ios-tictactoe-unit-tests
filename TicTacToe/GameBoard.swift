@@ -14,19 +14,22 @@ import Foundation
 
 typealias Coordinate = (x: Int, y: Int)
 
+enum Mark: String, Equatable {
+	case x = "X"
+	case o = "O"
+	case empty = " "
+
+	var stringValue: String {
+		switch self {
+		case .x: return "X"
+		case .o: return "O"
+		case .empty: return " "
+		}
+	}
+}
+
 class GameBoard {
-    
-    enum Mark: Equatable {
-        case x
-        case o
-        
-        var stringValue: String {
-            switch self {
-            case .x: return "X"
-            case .o: return "O"
-            }
-        }
-    }
+
     
     private enum Square: Equatable {
         case filled(Mark)

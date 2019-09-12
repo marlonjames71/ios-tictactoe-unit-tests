@@ -28,7 +28,7 @@ class GameControlTests: XCTestCase {
 	func testRestartActivePlayerSetToX() {
 		var gameControl = GameControl()
 		gameControl.restart()
-		XCTAssertTrue(gameControl.activePlayer == GameBoard.Mark.x)
+		XCTAssertTrue(gameControl.activePlayer == Mark.x)
 	}
 
 }
