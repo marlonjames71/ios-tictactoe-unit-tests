@@ -23,6 +23,7 @@ class GameViewController: UIViewController {
 	var gameControl = GameControl()
 
 	@IBOutlet weak var statusLabel: UILabel!
+	@IBOutlet weak var undoButton: UIButton!
 
 	private var gameState = GameState.active(.x) {
 		didSet {
@@ -50,6 +51,9 @@ class GameViewController: UIViewController {
 		//        board = GameBoard()
     }
 
+	@IBAction func undoTapped(_ sender: UIButton) {
+		try? gameControl.unmark()
+	}
 
     // MARK: - Private
 

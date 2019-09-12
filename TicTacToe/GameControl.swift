@@ -14,6 +14,8 @@ enum GameBoardError: Error, Equatable {
 
 struct GameControl {
 
+	var moves: [Coordinate] = []
+
 	mutating func restart() {
 		board = GameBoard()
 		activePlayer = .x
@@ -24,6 +26,18 @@ struct GameControl {
 	mutating func makeMark(at coordinate: Coordinate) throws {
 		guard let activePlayer = activePlayer else { return }
 		try board.place(mark: activePlayer, on: coordinate)
+		moves.append(coordinate)
+	}
+
+	mutating func unmark() throws {
+		guard let lastMove = moves.last else { return }
+		try board.remove(on: lastMove)
+		moves.removeLast()
+		if activePlayer == GameBoard.Mark.x {
+			activePlayer = GameBoard.Mark.o
+		} else if activePlayer == GameBoard.Mark.o {
+			activePlayer = GameBoard.Mark.x
+		}
 	}
 
 

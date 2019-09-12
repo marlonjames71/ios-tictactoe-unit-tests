@@ -48,6 +48,14 @@ class GameBoard {
         }
         squares[arrayIndex(for: square)] = .filled(mark)
     }
+
+	func remove(on square: Coordinate) throws {
+		if self[square] != nil {
+			squares[arrayIndex(for: square)] = .empty
+		} else {
+			throw GameBoardError.invalidSquare
+		}
+	}
     
     var isFull: Bool {
         for square in squares {
