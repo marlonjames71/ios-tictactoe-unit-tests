@@ -13,12 +13,22 @@ import XCTest
 
 class GameControlTests: XCTestCase {
 
-	func testResetGameBoard() {
+	func testRestartGameIsOverSetToFalse() {
 		var gameControl = GameControl()
-		XCTAssertNil(gameControl.gameIsOver == false)
+		gameControl.restart()
+		XCTAssertFalse(gameControl.gameIsOver)
 	}
 
+	func testRestartWinningPlayerSetToX() {
+		var gameControl = GameControl()
+		gameControl.restart()
+		XCTAssertNil(gameControl.winningPlayer)
+	}
 
-
+	func testRestartActivePlayerSetToX() {
+		var gameControl = GameControl()
+		gameControl.restart()
+		XCTAssertTrue(gameControl.activePlayer == GameBoard.Mark.x)
+	}
 
 }
